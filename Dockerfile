@@ -1,4 +1,5 @@
 FROM registry.access.redhat.com/ubi9-minimal as builder
+ENV LANG C.UTF-8
 RUN microdnf install -y make gcc gcc-c++ ruby ruby-devel
 RUN gem install listen asciidoctor asciidoctor-diagram ascii_binder
 
